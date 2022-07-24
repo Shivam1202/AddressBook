@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AddressBook.master.cs" Inherits="Content_AddressBook" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Address Book</title>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+     <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="JS/bootstrap.min.js"></script>   
+
+      
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container ">
+        <div >
+            <div class="row text-center" style="align-self:center;">
+                <h1 class="text-center">MULTI-ADDRESS BOOK</h1>
+            </div><br />
+            <div class="row">
+                <div class=" col-md-8 text-center">
+                    <asp:HyperLink CssClass="btn  btn-md" style="background-color:black;color:white;" runat="server" ID="hlCountryList" Text="Country" NavigateUrl="~/AdminPanel/Country/CountryList.aspx"></asp:HyperLink>
+                    &nbsp;&nbsp;| &nbsp;&nbsp;
+                    <asp:HyperLink CssClass="btn  btn-md" style="background-color:black;color:white; " runat="server" ID="hlStateList" Text="State" NavigateUrl="~/AdminPanel/State/StateList.aspx"></asp:HyperLink>
+                    &nbsp;&nbsp;| &nbsp;&nbsp;
+                    <asp:HyperLink CssClass="btn  btn-md" style="background-color:black;color:white; " runat="server" ID="hlCityList" Text="City" NavigateUrl="~/AdminPanel/City/CityList.aspx"></asp:HyperLink>
+                    &nbsp;&nbsp;| &nbsp;&nbsp;
+                    <asp:HyperLink CssClass="btn  btn-md" style="background-color:black;color:white; " runat="server" ID="hlContactCategory" Text="ContactCategory-List" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx"></asp:HyperLink>
+                    &nbsp;&nbsp;| &nbsp;&nbsp;
+                    <asp:HyperLink CssClass="btn  btn-md" style="background-color:black;color:white; " runat="server" ID="hlContact" Text="Contact-List" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx"></asp:HyperLink>
+                    <br /><br />
+                </div>
+                <div class="col-md-4 text-center text-success " style="font-size:medium">
+                    <asp:Label runat="server" ID="lblUserName"></asp:Label>
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                    <asp:LinkButton ID="btnLogout" runat="server" Text="LogOut" OnClick="btnLogout_Click" ></asp:LinkButton>
+                </div>
+                
+               
+            </div>
+        </div>
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         <div class="row">
+            <div class="col-md-12 text-center">
+                <hr/>
+                Nanda Shivam |  200540107518  |  200540107518@darshan.ac.in
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
